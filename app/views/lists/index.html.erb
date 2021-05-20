@@ -1,0 +1,19 @@
+
+<div class="cover mb-5 d-flex align-items-center justify-content-center">
+    <h1>Save your movies</h1>
+</div>
+
+
+<div class="container py-5">
+  <div class="mb-2">
+      <h3>My Lists</h3>
+      <% @lists.each do |list| %>
+      <%= link_to list.name, list_path(list)  %>
+      <%end%>
+  </div>
+
+    <div class="d-flex align-items-center justify-content-between mb-2">
+    <%= link_to 'Create a new movie list', new_list_path %>
+    </div>
+
+</div>
